@@ -1,33 +1,43 @@
 import { useEffect, useState } from 'react';
-// import { useSelectedServers } from '../../context/datatable/selectedServers';
 import api from '../../services/api.js'
+import TableLine from '../TableLine/TableLine.js';
 
 export default function Datatable () {
-  //Consome a API, salva os valores nesse useContext, depois joga pra os components de registros. 
-  //Depois disso, os que estiverem selected (estado local do registro) vão modificar o estado inicial e enviar pro summary
-  // const { selectedServers, setSelectedServers } = useSelectedServers();
-  const [allServers, setAllServers ] = useState([]); 
+
+  const [data, setData ] = useState([]); 
 
   useEffect(()=>{
     (async () => { 
-      const response = await api.get('http://localhost:3333/servers')
-      setAllServers(response)
-      console.log(allServers)
+      const response = await api.get('http://localhost:3333/servers');
+      setData(response.data)
+      console.log(response.data)
     })()
   }, [])
 
   return ( 
-    <table>
-      <thead>
-      <tr>
-        <th>Select</th>
-        <th>Hostname</th>
-        <th>Memória</th>
-        <th>vCPUs</th>
-        <th>Disco</th>
-        <th>IP</th>
-      </tr>
-      </thead>
-    </table>
+    <div className="container">
+      <h2>Tabela de servidores</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Select</th>
+            <th>Hostname</th>
+            <th>Memória</th>
+            <th>vCPUs</th>
+            <th>Disco</th>
+            <th>IP</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            data.map( (serverInfo, index) => { 
+              return(
+                <TableLine key={index} id={index} data={serverInfo.configuracao} /> 
+                )
+              }) 
+            }
+        </tbody>
+      </table>
+    </div>
   )
 }

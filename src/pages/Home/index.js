@@ -1,11 +1,14 @@
 import Datatable from '../../components/Datatable/Datatable';
 import DefaultLayout from '../../components/DefaultLayout';
+import Summary from '../../components/Summary/Summary';
 
 function Home() { 
   return (
     <DefaultLayout>
-      <h2>Tabela de servidores</h2>
-      <Datatable></Datatable>
+      <div className="container">
+        <Summary />
+        <Datatable />
+      </div>
     </DefaultLayout>
   );
 }
