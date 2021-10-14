@@ -4,63 +4,41 @@
   padding: 0;
 }
 
-.table-container { 
-  display: flex;
-  flex-direction: column;
-
+.summary-container { 
   width: 97%;
-
+  margin-top: 20px;
+  
+  text-align: center;
   font-family: Roboto Mono;
   font-size: 20px;
   font-weight: 700;
-
-  text-align: center;
-
+  
   border: 1px solid #F0F0F0;
   border-radius: 15px;
-  border-collapse: collapse;
 }
 
 .summary-table { 
-  display: flex;
-  flex-direction: row;
-}
-
-.table-title { 
-  background: #F0F0F0;
-  border-radius: 10px 10px 0 0;
-  
-}
-
-.table-heading { 
-  background: #F0F0F0;
-
+  width: 97%;
+  margin: 16px;
+  border-collapse: collapse;
   font-size: 14px;
   font-weight: 700;
   line-height: 18px;  
 }
 
-.table { 
-  border-radius: 15px;
-  border-collapse: collapse;
-  margin: 16px;
+.summary-title { 
+  background: #F0F0F0;
+  border-radius: 10px 10px 0 0; 
 }
 
-.table-heading, .table-body-cell { 
-  border: 0.5px solid #DDDDDD
+.summary-heading { 
+  background: #F0F0F0;
+  border: 0.5px solid #DDDDDD;
+  padding: 10px;
 }
 
-.summary-body { 
+.summary-body-cell { 
   text-align: left;
-
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 700;
-  
-}
-
-.datatable-body { 
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
+  border:0.5px solid #DDDDDD;
+  padding: 10px;
 }

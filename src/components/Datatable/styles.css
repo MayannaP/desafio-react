@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.datatable-container { 
+  display: flex;
+  flex-direction: column;
+
+  width: 97%;
+  margin-top: 20px;
+
+  font-family: Roboto Mono;
+  font-size: 20px;
+  font-weight: 700;
+
+  text-align: center;
+
+  border: 1px solid #F0F0F0;
+  border-radius: 15px;
+  border-collapse: collapse;
+}
+
+
+.datatable-title { 
+  background: #F0F0F0;
+  border-radius: 10px 10px 0 0; 
+}
+
+.datatable-heading { 
+  background: #F0F0F0;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;  
+}
+
+.datatable { 
+  max-width: 100%;
+  border-radius: 15px;
+  border-collapse: collapse;
+  margin: 16px;
+}
+
+.datatable-heading { 
+  border: 0.5px solid #DDDDDD;
+  padding: 11px;
+}

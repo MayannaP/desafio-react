@@ -20,20 +20,26 @@ export default function Summary(props) {
   }
 
   return(
-    <div className="table-container summary-container">
-        <h2 className="table-title">Sumário dos recursos dos servidores</h2>
-      <table className="summary-table table">
-        <thead>
-          <tr className="table-heading">Servidores Selecionados</tr>
-          <tr className="table-heading">Total de Memória</tr>
-          <tr className="table-heading">Total de CPUs</tr>
-          <tr className="table-heading">Total de Discos</tr>
-        </thead>
-        <tbody className="summary-body">
-          <tr className="table-body-cell">{selectedServers.length} servidores selecionados</tr>
-          <tr className="table-body-cell">{totalMemory} GB</tr>
-          <tr className="table-body-cell">{totalDiskGB.toFixed(0)} vCPUs</tr>
-          <tr className="table-body-cell">{totalcpuProvisioned} GB</tr>
+    <div className="summary-container">
+        <h2 className="summary-title">Sumário dos recursos dos servidores</h2>
+      <table className="summary-table">
+        <tbody>
+          <tr>
+            <th className="summary-heading">Servidores Selecionados</th>
+            <td className="summary-body-cell">{selectedServers.length} servidores selecionados</td>
+          </tr>
+          <tr>
+            <th className="summary-heading">Total de Memória</th>
+            <td className="summary-body-cell">{totalMemory} GB</td>
+          </tr>
+          <tr>
+            <th className="summary-heading">Total de CPUs</th>
+            <td className="summary-body-cell">{totalcpuProvisioned} vCPUs</td>
+          </tr>
+          <tr>
+            <th className="summary-heading">Total de Discos</th>
+            <td className="summary-body-cell">{totalDiskGB.toFixed(0)} GB</td>
+          </tr>
         </tbody>
       </table>
     </div>
