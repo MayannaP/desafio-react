@@ -1,7 +1,6 @@
 import './styles.css';
 import { useSelectedServers } from '../../context/datatable/selectedServers';
 
-
 export default function Summary(props) {  
   const { selectedServers } = useSelectedServers();
 
@@ -21,20 +20,20 @@ export default function Summary(props) {
   }
 
   return(
-    <div className="container">
-        <h2 className="summary__title">Sumário dos recursos dos servidores</h2>
-      <table className="summary__table">
-        <thead className="summary__headings">
-          <tr>Servidores Selecionados</tr>
-          <tr>Total de Memória</tr>
-          <tr>Total de CPUs</tr>
-          <tr>Total de Discos</tr>
+    <div className="table-container summary-container">
+        <h2 className="table-title">Sumário dos recursos dos servidores</h2>
+      <table className="summary-table table">
+        <thead>
+          <tr className="table-heading">Servidores Selecionados</tr>
+          <tr className="table-heading">Total de Memória</tr>
+          <tr className="table-heading">Total de CPUs</tr>
+          <tr className="table-heading">Total de Discos</tr>
         </thead>
-        <tbody className="summary__body">
-          <tr>{selectedServers.length} servidores selecionados</tr>
-          <tr>{totalMemory} GB</tr>
-          <tr>{totalDiskGB.toFixed(0)} vCPUs</tr>
-          <tr>{totalcpuProvisioned} GB</tr>
+        <tbody className="summary-body">
+          <tr className="table-body-cell">{selectedServers.length} servidores selecionados</tr>
+          <tr className="table-body-cell">{totalMemory} GB</tr>
+          <tr className="table-body-cell">{totalDiskGB.toFixed(0)} vCPUs</tr>
+          <tr className="table-body-cell">{totalcpuProvisioned} GB</tr>
         </tbody>
       </table>
     </div>

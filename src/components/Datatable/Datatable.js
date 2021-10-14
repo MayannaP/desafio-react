@@ -15,17 +15,17 @@ export default function Datatable () {
   }, [])
 
   return ( 
-    <div className="container">
-      <h2>Tabela de servidores</h2>
-      <table>
+    <div className="table-container">
+      <h2 className="table-title">Tabela de servidores</h2>
+      <table className="table">
         <thead>
           <tr>
-            <th>Select</th>
-            <th>Hostname</th>
-            <th>Memória</th>
-            <th>vCPUs</th>
-            <th>Disco</th>
-            <th>IP</th>
+            <th className="table-heading">Select</th>
+            <th className="table-heading">Hostname</th>
+            <th className="table-heading">Memória</th>
+            <th className="table-heading">vCPUs</th>
+            <th className="table-heading">Disco</th>
+            <th className="table-heading">IP</th>
           </tr>
         </thead>
         <tbody>

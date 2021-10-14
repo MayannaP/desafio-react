@@ -28,14 +28,14 @@ export default function TableLine(props) {
   
   return(
     <tr>
-      <td>
+      <td className="table-body-cell datatable-body">
         <input type="checkbox" onChange={handleChange} checked={selected} />
       </td>
-      <td>Server {props.id + 1}</td>
-      <td>{memoryProvisioned}GB</td>
-      <td>{cpuProvisioned}vCPUs</td>
-      <td>{totalDiskGB.toFixed(0)}GB</td>
-      <td>{ip}</td>
+      <td className="table-body-cell datatable-body">Server {props.id + 1}</td>
+      <td className="table-body-cell datatable-body">{memoryProvisioned} GB</td>
+      <td className="table-body-cell datatable-body">{cpuProvisioned} vCPUs</td>
+      <td className="table-body-cell datatable-body">{totalDiskGB.toFixed(0)} GB</td>
+      <td className="table-body-cell datatable-body">{ip}</td>
     </tr>
   )
 }
